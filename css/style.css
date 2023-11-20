@@ -2700,6 +2700,7 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
 .destinations_item {
   position: relative;
   width: 23%;
+  
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
