@@ -6237,9 +6237,10 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
 .travel-list .posts .item_right .item_text {
   color: #919193;
   font-size: 18px;
-  max-height: 74px;
-  overflow: hidden;
+  max-height: auto;
+
 }
+
 .travel-list .posts .item_right .info {
   position: absolute;
   left: 0;
@@ -6726,7 +6727,7 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   }
   .travel-list .posts .item_right .item_text {
     font-size: 16px;
-    max-height: 68px;
+    max-height: auto;
   }
   .travel-list .posts .item_right .info .days {
     font-size: 18px;
