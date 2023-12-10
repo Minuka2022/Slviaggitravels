@@ -17,151 +17,25 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon.ico">
     <meta name="msapplication-TileColor" content="#151515">
     <meta name="theme-color" content="#151515">
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script>
+            $(function() {
+            $("#top_panel").load("navbar.html");
+            $("#footer").load("footer.html");
+            });
+            </script>
+
+
 </head>
 
 <body>
     <div class="container">
 
         <!-- Navbar -->
-        <div class="top_panel inversion">
-            <div class="wrap">
-                <div class="wrap_float">
-                    <div class="currency">
-                        <select>
-                            <option value="usd">usd</option>
-                            <option value="eur">eur</option>
-                            <option value="rub">rub</option>
-                        </select>
-                    </div>
-                    <div class="left" style="width:150px;"> 
-                        <!-- <div class="search_btn"></div> -->
-                        <a href="/" class="logo">
-                            <img src="img/1212.png" alt="">
-                        </a>
-                    </div>
-                    <div class="menu_wrap" id="menu_wrap">
-                        <div class="scroll">
-                            <div class="center">
-                                <div class="menu">
-                                    <ul>
-                                        <li><a href="/"><span>Home</span></a></li>
-                                        <li class="dropdown_li">
-                                           <ul>
-                                            <li>
-                                                <a href="travel-list-image-header.html"><span>Travel list</span></a>
-                                            </li>
-                                           </ul>  
-
-                                            <ul class="dropdown_ul">
-                                                <li><a href="Summer_tour.html">Summer</a></li>
-                                                <li><a href="Winter_tour.html">Winter tour</a></li>
-                                                <li><a href="Honeymoon_tour.html">Honeymoon</a></li>
-                                                <!-- <li><a href="travel-list-image-header.html">Travel list Full With Image Header</a></li>
-                                                <li><a href="search-results.html">Search Result</a></li>
-                                                <li><a href="search-results-not-found.html">Search Nothing Found</a></li>
-                                                <li><a href="tour-page-right-sidebar.html">Tour page Right Sidebar</a></li>
-                                                <li><a href="tour-page-left-sidebar.html">Tour page Left Sidebar</a></li>
-                                                <li><a href="tour-page-right-sidebar-width-reply.html">Tour page with reply form</a></li> -->
-                                            </ul>
-                                        </li>
-
-                                         <li><a href="gallery.html"><span>Gallery</span></a></li>
-
-
-                                        <!-- <li class="dropdown_li">
-                                           <ul>
-                                            <li>
-                                                <a href="gallery.html"><span>Gallery</span></a>
-                                            </li>
-                                           </ul>
-                                            <!-- <a href="gallery.html"><span>Gallery</span></a> -->
-                                            <ul class="dropdown_ul">
-                                                <!-- <li><a href="stories-full-width.html">Stories Full With</a></li>
-                                                <li><a href="story.html">Stories Single</a></li>
-                                                <li><a href="stories-right-sidebar.html">Stories Right Sidebar</a></li>
-                                                <li><a href="stories-left-sidebar.html">Stories Left Sidebar</a></li> -->
-                                                <!-- <li><a href="gallery.html">Gallery</a></li> -->
-                                                <!-- <li><a href="gallery-single.html">Gallery Single</a></li>
-                                                <li><a href="404.html">404 page</a></li>
-                                                <li><a href="static-page-right-sidebar.html">Static Page Right Sidebar</a></li>
-                                                <li><a href="static-page-left-sidebar.html">Static Page Left Sidebar</a></li>
-                                                <li><a href="about-us.html">About Us</a></li> -->
-                                            </ul>
-                                        </li>
-                                        <li class="dropdown_li">
-                                            <a href="#"><span>Blog</span></a>
-                                            <ul class="dropdown_ul">
-                                                <li><a href="blog-full-width.html">Blog Full With</a></li>
-                                                <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
-                                                <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-                                                <li><a href="blog-search-results.html">Search Result</a></li>
-                                                <li><a href="blog-search-results-not-found.html">Search Nothing Found</a></li>
-                                                <li><a href="blog-single-right-sidebar.html">Blog Single Right Sidebar</a></li>
-                                                <li><a href="blog-single-left-sidebar.html">Blog Single Left Sidebar</a></li>
-                                            </ul>
-                                        </li>
-                                 
-                                        <li><a href="contacts.html"><span>Contacts</span></a></li>
-                                        <li><a href="about-us.html"><span>About us</span></a></li>
-                                    </ul>
-                                    <div class="mobile_content">
-                                        <div class="currency_mob">
-                                            <select>
-                                                <option value="usd">usd</option>
-                                                <option value="rub">rub</option>
-                                                <option value="eur">eur</option>
-                                            </select>
-                                            <p>
-                                                Chosen currency
-                                            </p>
-                                        </div>
-                                        <div class="tel">
-                                            <a href="tel:+0034411345777">+ 00 344 113 457 77</a>
-                                            <p>Round the clock support</p>
-                                        </div>
-                                        <div class="social">
-                                            <a href="#" class="link facebook"><span></span></a>
-                                            <a href="#" class="link instagram"><span></span></a>
-                                            <a href="#" class="link pinterest"><span></span></a>
-                                            <a href="#" class="link twitter"><span></span></a>
-                                            <a href="#" class="link youtube"><span></span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="close" id="menu-close">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </div>
-                            </div>
-                            <div class="right">
-                                <div class="tel"><a href="tel:+19092020119"><span>+94 77 902 3628</span></a></div>
-                                <a class="favorites-count" title="Favourites" href="favourites.html">
-                                    <div class="_counter">14</div>
-                                    <div class="_text">Favourites</div>
-                                </a>
-                            </div>
-                            <div class="user" id="userblock">
-                                <div class="userlink" id="userlink"></div>
-                                <div class="usermenu" id="usermenu">
-                                    <ul>
-                                        <li><a href="#" class="js-popup-open" data-href="#login">Login</a></li>
-                                        <li><a href="#" class="js-popup-open" data-href="#registration">Registration</a></li>
-                                        <li><a href="#" class="js-popup-open" data-href="#recovery-pass">Forgot password?</a></li>
-                                        <li><a href="#" class="js-popup-open" data-href="#profile-setting">Setting</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mobile_btn" id="mobile_btn">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-            </div>
+        <div id="top_panel" class="top_panel inversion">
         </div>
+
         <div class="breadcrumbs">
             <div class="wrap">
                 <div class="wrap_float">
@@ -611,87 +485,8 @@
                 </a>
             </div>
         </div>
-         <div class="footer">
-            <div class="wrap">
-                <div class="wrap_float">
-                    <div class="footer_top">
-                        <div class="left">
-                            <div class="col">
-                                <div class="_title m_title">Quick links</div>
-                                <ul>
-                                    <li><a href="travel-list-full-width.html">All tours</a></li>
-                                    <li><a href="travel-list-right-sidebar.html">Contact us</a></li>
-                                    <li><a href="travel-list-left-sidebar.html">About us</a></li>
-                                    <li><a href="travel-list-image-header.html">Summer tours</a></li>
-                                    <li><a href="search-results.html">Winter tours</a></li>
-                                    <li><a href="search-results-not-found.html">Honeymoon tours</a></li>
-                                    <!-- <li><a href="tour-page-right-sidebar.html">Tour page Right Sidebar</a></li>
-                                    <li><a href="tour-page-left-sidebar.html">Tour page Left Sidebar</a></li>
-                                    <li><a href="tour-page-right-sidebar-width-reply.html">Tour page with reply form</a></li> -->
-                                </ul>
-                            </div>
-                            <div class="col">
-                                <div class="_title m_title">Page</div>
-                                <ul>
-                                    <!-- <li><a href="stories-full-width.html">Stories Full With</a></li>
-                                    <li><a href="story.html">Stories Single</a></li>
-                                    <li><a href="stories-right-sidebar.html">Stories Right Sidebar</a></li>
-                                    <li><a href="stories-left-sidebar.html">Stories Left Sidebar</a></li>
-                                    <li><a href="gallery.html">Gallery</a></li>
-                                    <li><a href="gallery-single.html">Gallery Single</a></li>
-                                    <li><a href="404.html">404 page</a></li>
-                                    <li><a href="static-page-right-sidebar.html">Static Page Right Sidebar</a></li>
-                                    <li><a href="static-page-left-sidebar.html">Static Page Left Sidebar</a></li>
-                                    <li><a href="about-us.html">About Us</a></li> -->
-                                </ul>
-                            </div>
-                            <div class="col">
-                                <div class="_title m_title">Blog</div>
-                                <ul>
-                                    <!-- <li><a href="blog-full-width.html">Blog Full With</a></li>
-                                    <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
-                                    <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-                                    <li><a href="blog-search-results.html">Search Result</a></li>
-                                    <li><a href="blog-search-results-not-found.html">Search Nothing Found</a></li>
-                                    <li><a href="blog-single-right-sidebar.html">Blog Single Right Sidebar</a></li>
-                                    <li><a href="blog-single-left-sidebar.html">Blog Single Left Sidebar</a></li> -->
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="right">
-                            <div class="_title">Contacts</div>
-                            <div class="contacts_info">
-                                <div class="tel">
-                                    <a href="tel:+19092020119">+94 701612176</a>
-                                    <p>24/7 support</p>
-                                </div>
-                                <div class="email">
-                                    <a href="mailto:info@hellodigi.ru">info@silankaviaggi</a>
-                                    <p>For any questions</p>
-                                </div>
-                                <div class="address">
-                                    No512/12 . sample road . Nugegoda <br> Sri lanka
-                                </div>
-                            </div>
-                            <div class="socials social-links">
-                                <a href="#" class="link facebook"><span></span></a>
-                                <a href="#" class="link instagram"><span></span></a>
-                                <a href="#" class="link pinterest"><span></span></a>
-                                <a href="#" class="link twitter"><span></span></a>
-                                <a href="#" class="link youtube"><span></span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer_bottom">
-                        <div class="left">
-                            <a href="#">Privacy Policy</a>
-                        </div>
-                        <div class="right">
-                            Copyright © 2023 by Idearigs
-                        </div>
-                    </div>
-                </div>
-            </div>
+        
+         <div id="footer" class="footer">
         </div>
 
     </div>
