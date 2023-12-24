@@ -7440,6 +7440,34 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   left: 0;
   top: 32px;
 }
+
+.tour_page_body .left_content .included ul .ex:before {
+  width: 44px;
+  height: 44px;
+  background: red;
+  border-radius: 50%;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 32px;
+}
+
+.tour_page_body .left_content .included ul .ex:after {
+  background: url(../img/cross.png) center center no-repeat;
+  background-size: contain;
+  position: absolute;
+  content: '';
+  top: 48px;
+  left: 14px;
+  width: 16px;
+  height: 12px
+}
+
+
+
+
+
+
 .tour_page_body .left_content .included ul li:after {
   background: url(../img/check-mark.svg) center center no-repeat;
   background-size: contain;
