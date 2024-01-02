@@ -3638,14 +3638,14 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   content: '';
 }
 .footer_top .col {
-  width: 33.333%;
+  width: 50%;
   padding-right: 42px;
 }
 .footer_top ._title {
   font-size: 28px;
   color: #fff;
   font-family: 'Prata', serif;
-  margin-bottom: 32px;
+  margin-bottom: 45px;
 }
 .footer_top ul li {
   margin-bottom: 18px;
