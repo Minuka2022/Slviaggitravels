@@ -6952,7 +6952,7 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   background-size: cover;
   position: relative;
   padding-bottom: 115px;
-  overflow: hidden;
+
 }
 .tour_page_head:before {
   opacity: .3;

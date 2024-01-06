@@ -24,7 +24,7 @@
 
 
         <!-- navbar -->
-        <div class="top_panel">
+        <div class="top_panel inversion">
             <div class="wrap">
                 <div class="wrap_float">
                     <!-- <div class="currency">
@@ -33,7 +33,7 @@
                             <option value="eur">eur</option>
                             <option value="rub">rub</option>
                         </select> -->
-                    
+                   
                     <div class="left" style="width:190px;">
                         <a href="/" class="logo">
                             <img loading="lazy" src="img/logo.svg" alt="">
@@ -46,11 +46,11 @@
                                 <ul>
                                         <li><a href="/"><span>Home</span></a></li>
                                         <li> <a href="Lista-di-viaggio-in-Sri-Lanka.html"><span>elenco di viaggio</span></a></li>
-                                        <li><a href="gallery.html"><span>Galleria</span></a></li>
+                                       <li><a href="galleria.html"><span>Galleria</span></a></li>
                                         <li><a href="blog-full-width.html"><span>Blog</span></a></li>
                                      
-                                        <li><a href="contacts.html"><span>Contatti</span></a></li>
-                                        <li><a href="about-us.html"><span>Chi siamo</span></a></li>
+                                        <li><a href="contatti.html"><span>Contatti</span></a></li>
+                                        <li><a href="chi-siamo.html"><span>Chi siamo</span></a></li>
                                     </ul>
                                     <div class="mobile_content">
                                      
@@ -102,15 +102,27 @@
                 </div>
             </div>
         </div>
-
-
-    <script src="script.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/lightgallery.js"></script>
-    <script src="js/jquery.mousewheel.min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/hammer.js"></script>
-    <script src="js/scripts.js"></script>
+        <link media="all" rel="stylesheet" href="css/style.css" />
+<script>
+      $("#mobile_btn").on("click", function(){
+        var thisBtn = $(this),
+            menu = $("#menu_wrap").fadeIn();
+        
+        $("html, body").addClass("locked");
+        $("#menu-close, #mobile_btn").addClass("opened");
+        popupFunction();
+    });
+    
+    $("#menu-close").on("click", function(){
+        
+        $("html, body").removeClass("locked");
+        $("#menu-close, #mobile_btn").removeClass("opened");
+        $("#menu_wrap").fadeOut();
+        popupCloseFunction();
+    });
+</script>
+    
+    
+    
 </body>
 </html>

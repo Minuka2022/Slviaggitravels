@@ -18,13 +18,7 @@
     <meta name="msapplication-TileColor" content="#151515">
     <meta name="theme-color" content="#151515">
 
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-            <script>
-            $(function() {
-            $("#top_panel").load("navbar.html");
-            $("#footer").load("footer.html");
-            });
-            </script>
+   
 
 
 </head>
@@ -32,85 +26,15 @@
 <body>
     <div class="container">
 
-        <!-- Navbar -->
-        <div class="top_panel inversion">
-            <div class="wrap">
-                <div class="wrap_float">
-                    <!-- <div class="currency">
-                        <select>
-                            <option value="usd">usd</option>
-                            <option value="eur">eur</option>
-                            <option value="rub">rub</option>
-                        </select> -->
-                    </div>
-                    <div class="left" style="width:190px;">
-                        <a href="/" class="logo">
-                            <img loading="lazy" src="img/logo.svg" alt="">
-                        </a>
-                    </div>
-                    <div class="menu_wrap" id="menu_wrap">
-                        <div class="scroll">
-                            <div class="center">
-                                <div class="menu">
-                                <ul>
-                                        <li><a href="/"><span>Home</span></a></li>
-                                        <li> <a href="Lista-di-viaggio-in-Sri-Lanka.html"><span>elenco di viaggio</span></a></li>
-                                        <li><a href="gallery.html"><span>Galleria</span></a></li>
-                                        <li><a href="blog-full-width.html"><span>Blog</span></a></li>
-                                     
-                                        <li><a href="contacts.html"><span>Contatti</span></a></li>
-                                        <li><a href="about-us.html"><span>Chi siamo</span></a></li>
-                                    </ul>
-                                    <div class="mobile_content">
-                                     
-                                        
-                                        <div class="tel">
-                                            <a href="tel:+0034411345777">+ 00 344 113 457 77</a>
-                                            <p>Round the clock support</p>
-                                        </div>
-                                        <div class="social">
-                                            <a href="#" class="link facebook"><span></span></a>
-                                            <a href="#" class="link instagram"><span></span></a>
-                                            <a href="#" class="link pinterest"><span></span></a>
-                                            <a href="#" class="link twitter"><span></span></a>
-                                            <a href="#" class="link youtube"><span></span></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="close" id="menu-close">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </div>
-                            </div>
-                            <div class="right">
-                                <div class="tel"><a href="tel:+19092020119"><span>+94 77 902 3628</span></a></div>
-                                <!-- <a class="favorites-count" title="Favourites" href="favourites.html">
-                                    <div class="_counter">14</div>
-                                    <div class="_text">Favourites</div>
-                                </a> -->
-                            </div>
-                            <div class="user" id="userblock">
-                                <div class="userlink" id="userlink"></div>
-                                <div class="usermenu" id="usermenu">
-                                    <ul>
-                                        <li><a href="#" class="js-popup-open" data-href="#login">Login</a></li>
-                                        <li><a href="#" class="js-popup-open" data-href="#registration">Registration</a></li>
-                                        <li><a href="#" class="js-popup-open" data-href="#recovery-pass">Forgot password?</a></li>
-                                        <li><a href="#" class="js-popup-open" data-href="#profile-setting">Setting</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mobile_btn" id="mobile_btn">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-            </div>
-        </div>
+          <header id="header"></header> 
+         
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+           <script type="text/javascript">
+             $(document).ready(function () {
+                 $('#header').load("header_inversion.html");
+                 $('#footer').load("footer.html");  
+             });
+         </script>
 
         <div class="breadcrumbs">
             <div class="wrap">
