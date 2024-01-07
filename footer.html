@@ -35,15 +35,9 @@
                         </ul>
                     </div>
                     <div class="col">
-                        <!-- <div class="_title m_title">Blog</div> -->
+                       
                         <ul>
-                            <!-- <li><a href="blog-full-width.html">Blog Full With</a></li>
-                            <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
-                            <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-                            <li><a href="blog-search-results.html">Search Result</a></li>
-                            <li><a href="blog-search-results-not-found.html">Search Nothing Found</a></li>
-                            <li><a href="blog-single-right-sidebar.html">Blog Single Right Sidebar</a></li>
-                            <li><a href="blog-single-left-sidebar.html">Blog Single Left Sidebar</a></li> -->
+                          
                         </ul>
                     </div>
                 </div>
@@ -84,68 +78,5 @@
     </div>
 
 </div>
-<script>
-     $(window).on('resize',function() {
-        if( window.innerWidth <= 1000 ){
-              $(".m_title").addClass("js-column_title");
-         }
-        
-        if( window.innerWidth > 1000 ){
-              $(".m_title").removeClass("js-column_title");
-         }
-        
-        if (iPad) {
-            
-            var wrap = $(".wrap").innerWidth();
-            var margin = ((($(window).innerWidth()) - ($(".wrap").innerWidth()))/2);
-        
-            if ($(".main_slider").length) {
-                $("body").addClass("mainpage");
-                
-                $(".ipad .most_popular .title_wrap").width(wrap);
-                $(".ipad .most_popular .title_wrap").css("margin-left", margin + "px");
-                $(".ipad .tour-slider .tour_item:first-child").css("margin-left", margin + "px");
-                $(".ipad .tour-slider .tour_item:last-child").css("margin-right", margin + "px");
-                
-                $(".ipad .stories .title_wrap").width(wrap);
-                $(".ipad .stories .title_wrap").css("margin-left", margin + "px");
-                $(".ipad .stries_slider .story_item:first-child").css("margin-left", margin + "px");
-                $(".ipad .stries_slider .story_item:last-child").css("margin-right", margin + "px");
-            }
-            
-            if ($(".tour_page_head").length) {
-                $(".ipad .tour_page_head .top-info").innerWidth(wrap);
-                $(".ipad .tour_page_head .bottom-info").innerWidth(wrap);
-                $(".ipad .tour_page_head .top-info").css("margin-left", margin + "px");
-                $(".ipad .tour_page_head .bottom-info").css("margin-left", margin + "px");
-                $(".ipad .tour_page_head .slider .slide:first-child").css("margin-left", margin + "px");
-                $(".ipad .tour_page_head .slider .slide:last-child").css("margin-right", margin + "px");
-            }
-        
-            if ($(".team_item").length) {
-                $(".about-us-page .team-head").innerWidth(wrap);
-                $(".about-us-page .team-head").css("margin-left", margin + "px");
-                $(".ipad .about-us-page .team_item:first-child").css("margin-left", margin + "px");
-                $(".ipad .about-us-page .team_item:last-child").css("margin-right", margin + "px");
-            }
-            
-        }
-        
-    });
-    
-    if (screen.width <= 1000) {
-        $(".m_title").addClass("js-column_title");
-    }
-    
-    $( ".m_title" ).on( "click", function(){
-        var this_title = $(this),
-            thisUl = this_title.next();
-        
-        if (this_title.hasClass("js-column_title")) {
-            this_title.toggleClass("active");
-            thisUl.slideToggle();
-        }
-    });
-    
-    $(window).trigger('resize');
+<script>$(window).on('resize',function(){ if( window.innerWidth <=1000 ){ $(".m_title").addClass("js-column_title");} if( window.innerWidth >1000 ){ $(".m_title").removeClass("js-column_title");} if (iPad){ var wrap=$(".wrap").innerWidth(); var margin=((($(window).innerWidth()) - ($(".wrap").innerWidth()))/2); if ($(".main_slider").length){ $("body").addClass("mainpage"); $(".ipad .most_popular .title_wrap").width(wrap); $(".ipad .most_popular .title_wrap").css("margin-left", margin + "px"); $(".ipad .tour-slider .tour_item:first-child").css("margin-left", margin + "px"); $(".ipad .tour-slider .tour_item:last-child").css("margin-right", margin + "px"); $(".ipad .stories .title_wrap").width(wrap); $(".ipad .stories .title_wrap").css("margin-left", margin + "px"); $(".ipad .stries_slider .story_item:first-child").css("margin-left", margin + "px"); $(".ipad .stries_slider .story_item:last-child").css("margin-right", margin + "px");} if ($(".tour_page_head").length){ $(".ipad .tour_page_head .top-info").innerWidth(wrap); $(".ipad .tour_page_head .bottom-info").innerWidth(wrap); $(".ipad .tour_page_head .top-info").css("margin-left", margin + "px"); $(".ipad .tour_page_head .bottom-info").css("margin-left", margin + "px"); $(".ipad .tour_page_head .slider .slide:first-child").css("margin-left", margin + "px"); $(".ipad .tour_page_head .slider .slide:last-child").css("margin-right", margin + "px");} if ($(".team_item").length){ $(".about-us-page .team-head").innerWidth(wrap); $(".about-us-page .team-head").css("margin-left", margin + "px"); $(".ipad .about-us-page .team_item:first-child").css("margin-left", margin + "px"); $(".ipad .about-us-page .team_item:last-child").css("margin-right", margin + "px");}}}); if (screen.width <=1000){ $(".m_title").addClass("js-column_title");} $( ".m_title" ).on( "click", function(){ var this_title=$(this), thisUl=this_title.next(); if (this_title.hasClass("js-column_title")){ this_title.toggleClass("active"); thisUl.slideToggle();}}); $(window).trigger('resize');
 </script>
