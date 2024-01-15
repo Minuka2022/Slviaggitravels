@@ -93,8 +93,8 @@
                                             <div class="date-col">
                                                 <div class="label">Check In</div>
                                                 <div class="date_div">
-                                                    <input type="text" class="js_calendar desctop-input">
-                                                    <input type="date" class="mobile-input">
+                                                    <input type="text" class="js_calendar desctop-input" name="cin">
+                                                    <input type="date" class="mobile-input" name="cin">
                                                     <div class="day"></div>
                                                     <div class="date_div_right">
                                                         <div class="month"></div>
@@ -565,6 +565,13 @@ Pernottamento in hotel a Sigiriya.
         });
     </script>
 
+<head>
+    <!-- Other head elements -->
+  
+    <!-- Include EmailJS SDK -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  </head>
+  
 
     <div class="popup book-now-popup" id="book-now">
         <div class="scroll">
@@ -603,12 +610,13 @@ Pernottamento in hotel a Sigiriya.
                         </div>
                     </div> <!-- //change -->
                     <div class="form">
-                        <input type="text" class="input" placeholder="Your First Name">
-                        <input type="text" class="input" placeholder="Your Last Name">
-                        <input type="email" class="input" placeholder="Your Email">
-                        <input type="tel" class="input" placeholder="Your Number Phone">
-                        <textarea class="textarea" placeholder="Where are your address?"></textarea>
-                        <textarea class="textarea" placeholder="Note:"></textarea>
+
+                        <input type="text" class="input" placeholder="Your First Name" id="firstName">
+                        <input type="text" class="input" placeholder="Your Last Name" id="lastName">
+                        <input type="email" class="input" placeholder="Your Email" id="email">
+                        <input type="tel" class="input" placeholder="Your Number Phone" id="phone">
+                        <textarea class="textarea" placeholder="Where are your address?" id="address"></textarea>
+                        <textarea class="textarea" placeholder="Note:" id="note"></textarea>
                         <button class="submit button js-submit">Book Now | <b>$356</b></button>
                     </div>
                 </div>
@@ -616,6 +624,80 @@ Pernottamento in hotel a Sigiriya.
         </div>
         <div class="close"></div>
     </div>
+                        <script type="text/javascript"
+                            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+                    </script>
+                    <script type="text/javascript">
+                    (function(){
+                        emailjs.init("4Ka-C28fB9Wo7uUUS");
+                    })();
+                    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          document.querySelector('.js-submit').addEventListener('click', function() {
+            // Gather form data
+            var formData = {
+              firstName: document.getElementById('firstName').value,
+              lastName: document.getElementById('lastName').value,
+              email: document.getElementById('email').value,
+              phone: document.getElementById('phone').value,
+              address: document.getElementById('address').value,
+              note: document.getElementById('note').value
+            };
+      
+            // Use EmailJS to send the email to you
+            emailjs.init("4Ka-C28fB9Wo7uUUS");  // Replace with your User ID
+      
+            // Prepare the email template parameters for your email
+            var templateParamsForYou = {
+              to_name: "Your Name",  // Replace with your name or the desired recipient name
+              from_name: formData.firstName,
+              email: formData.email,
+              phone: formData.phone,
+              address: formData.address,
+              note: formData.note
+            };
+      
+            // Use the service ID and template ID from your EmailJS account
+            emailjs.send("service_66vfecl", "template_ix54lrq", templateParamsForYou)
+              .then(function(response) {
+                console.log("Your email sent successfully:", response);
+              })
+              .catch(function(error) {
+                console.error("Your email failed to send:", error);
+              });
+      
+            // Use EmailJS to send the confirmation email to the customer
+        //     var templateParamsForCustomer = {
+        //       to_name: formData.firstName + ' ' + formData.lastName,
+        //       from_name: "Your Name",  // Replace with your name or the desired sender name
+        //       email: formData.email,
+        //       phone: formData.phone,
+        //       address: formData.address,
+        //       note: formData.note
+        //     };
+      
+        //     // Use the service ID and template ID for the customer from your EmailJS account
+        //     emailjs.send("your_service_id", "your_template_id_for_customer", templateParamsForCustomer)
+        //       .then(function(response) {
+        //         console.log("Customer email sent successfully:", response);
+                
+        //         // Display a confirmation message to the user (you may want to replace this with actual user feedback)
+        //         alert('Booking successful!');
+                
+        //         // Optionally, you can redirect the user to a thank-you page or perform other actions as needed
+        //         // window.location.href = 'thank-you.html';
+        //       })
+        //       .catch(function(error) {
+        //         console.error("Customer email failed to send:", error);
+                
+        //         // Display an error message to the user or handle the error appropriately
+        //         alert('Booking failed. Please try again later.');
+        //       });
+          });
+        });
+      </script>
+      
 
     <div class="popup success-popup" id="contact-us-success">
         <div class="scroll">
