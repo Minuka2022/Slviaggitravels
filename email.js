@@ -21,6 +21,14 @@ document.addEventListener('DOMContentLoaded', function() {
       note: document.getElementById('note').value,
       package: document.getElementById('package').value,
 
+      iday: document.getElementById('auto-fill-day').innerHTML,
+      imonth: document.getElementById('auto-fill-month').innerHTML,
+      iyear: document.getElementById('auto-fill-year').innerHTML,
+
+      oday: document.getElementById('auto-fill-day1').innerHTML,
+      omonth: document.getElementById('auto-fill-month1').innerHTML,
+      oyear: document.getElementById('auto-fill-year1').innerHTML,
+
     };
 
     // Use EmailJS to send the email to you
@@ -35,6 +43,13 @@ document.addEventListener('DOMContentLoaded', function() {
       address: formData.address,
       note: formData.note,
       package: formData.package,
+      iday: formData.iday,
+      imonth: formData.imonth,
+      iyear: formData.iyear,
+      oday: formData.oday,
+      omonth: formData.omonth,
+      oyear:formData.oyear,
+
     };
 
     // Use the service ID and template ID from your EmailJS account
@@ -49,12 +64,18 @@ document.addEventListener('DOMContentLoaded', function() {
     // Use EmailJS to send the confirmation email to the customer
     var templateParamsForCustomer = {
       to_name: formData.firstName + ' ' + formData.lastName,
-      from_name: "Your Name",  // Replace with your name or the desired sender name
+      from_name: formData.firstName,  // Replace with your name or the desired sender name
       email: formData.email,
       phone: formData.phone,
       address: formData.address,
       note: formData.note,
       package: formData.package,
+      iday: formData.iday,
+      imonth: formData.imonth,
+      iyear: formData.iyear,
+      oday: formData.oday,
+      omonth: formData.omonth,
+      oyear:formData.oyear,
     };
 
     // Use the service ID and template ID for the customer from your EmailJS account
@@ -84,4 +105,10 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('address').value = '';
   document.getElementById('note').value = '';
   document.getElementById('package').value = '';
+  document.getElementById('oday').value = '';
+  document.getElementById('omonth').value = '';
+  document.getElementById('oyear').value = '';
+  document.getElementById('iday').value = '';
+  document.getElementById('imonth').value = '';
+  document.getElementById('iyear').value = '';
 });
