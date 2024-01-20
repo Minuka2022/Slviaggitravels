@@ -87,12 +87,12 @@
                                             <div class="date-col">
                                                 <div class="label">Check In</div>
                                                 <div class="date_div">
-                                                    <input type="text" class="js_calendar desctop-input">
-                                                    <input type="date" class="mobile-input">
-                                                    <div class="day">21</div>
+                                                    <input type="text" class="js_calendar desctop-input" name="cin">
+                                                    <input type="date" class="mobile-input" name="cin">
+                                                    <div class="day"></div>
                                                     <div class="date_div_right">
-                                                        <div class="month">December</div>
-                                                        <div class="year">2019</div>
+                                                        <div class="month"></div>
+                                                        <div class="year"></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -101,10 +101,10 @@
                                                 <div class="date_div">
                                                     <input type="text" class="js_calendar desctop-input">
                                                     <input type="date" class="mobile-input">
-                                                    <div class="day">21</div>
+                                                    <div class="day" name="day"></div>
                                                     <div class="date_div_right">
-                                                        <div class="month">December</div>
-                                                        <div class="year">2019</div>
+                                                        <div class="month" name="month"></div>
+                                                        <div class="year" name="year"></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -115,7 +115,7 @@
                                                         <button class="plus"></button>
                                                         <button class="minus"></button>
                                                     </div>
-                                                    <input type="number" class="val js_num" value="3" min="0" max="99">
+                                                    <input type="number" class="val js_num" name="adults" value="3" min="0" max="99">
                                                 </div>
                                             </div>
                                             <div class="num-col last">
@@ -125,7 +125,7 @@
                                                         <button class="plus"></button>
                                                         <button class="minus"></button>
                                                     </div>
-                                                    <input type="number" class="val js_num" value="3" min="0" max="99">
+                                                    <input type="number" class="val js_num" name="children" value="3" min="0" max="99">
                                                 </div>
                                             </div>
                                         </div>
@@ -133,7 +133,7 @@
                                 </div>
                                 <div class="bottom-info-right">
                                     <div class="info">
-                                        <div class="days">14 Giorni |</div>
+                                        <div class="days">7 Giorni |</div>
                                         <div class="cost">Richiedi</div>
                                     </div>
                                     <button class="btn button js-popup-open" data-href="#book-now">Richiedi ora</button>
@@ -149,6 +149,9 @@
                                     </div>
                                 </div>
                             </div>
+
+
+  
                         </div>
                     </div>
                 </div>
@@ -708,7 +711,10 @@ Cena e pernottamento in hotel ad Ahungalle.
     
     </div>
 
-   
+    <head>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  </head>
+
 
     <div class="popup book-now-popup" id="book-now">
         <div class="scroll">
@@ -719,39 +725,42 @@ Cena e pernottamento in hotel ad Ahungalle.
                 <div class="popup-body">
                     <div class="tour-title">
                         <div class="img">
-                            <img loading="lazy" src="img/sigiriya.jpg" alt="">
+                            <img loading="lazy" src="img/dalada_maligawa_1.webp" alt="">
                         </div>
                         <div class="tour-name">
-                            Sri Lanka: storia, fauna selvatica e spiagge in 14 giorn
+                            Tour di Sette Giorni Esplorazione e Relax in Sri Lanka
                         </div>
                     </div>
                     <div class="tour-info">
                         <div class="col">
+                            <!-- //change -->
                             <div class="label">Arrivo</div>
                             <div class="date">
-                                <div class="day">09</div>
-                                <div class="month">May</div>
-                                <div class="year">2019</div>
+                                <div class="day"  name="auto-fill-day" id="auto-fill-day"></div>
+                                <div class="month" name="auto-fill-month" id="auto-fill-month"></div>
+                                <div class="year" name="auto-fill-year" id="auto-fill-year"></div>
                             </div>
-                            <div class="label">Adulti: <span>3</span></div>
+                            <div class="label">Adulti: <span name="auto-fill-adults">3</span></div>
                         </div>
                         <div class="col">
                             <div class="label">Scopire</div>
                             <div class="date">
-                                <div class="day">09</div>
-                                <div class="month">May</div>
-                                <div class="year">2019</div>
+                                <div class="day" name="auto-fill-day1" id="auto-fill-day1" ></div>
+                                <div class="month" name="auto-fill-month1" id="auto-fill-month1"></div>
+                                <div class="year" name="auto-fill-year1" id="auto-fill-year1"></div>
                             </div>
-                            <div class="label">bambini: <span>0</span></div>
+                            <div class="label">bambini: <span name="auto-fill-children">0</span></div>
                         </div>
-                    </div>
+                    </div> <!-- //change -->
                     <div class="form">
-                        <input type="text" class="input" placeholder="Your First Name">
-                        <input type="text" class="input" placeholder="Your Last Name">
-                        <input type="email" class="input" placeholder="Your Email">
-                        <input type="tel" class="input" placeholder="Your Number Phone">
-                        <textarea class="textarea" placeholder="Where are your address?"></textarea>
-                        <textarea class="textarea" placeholder="Note:"></textarea>
+                        <input type="hidden" name="tour_description" value="Tour di Sette Giorni Esplorazione e Relax in Sri Lanka" id="package">
+
+                        <input type="text" class="input" placeholder="Your First Name" id="firstName">
+                        <input type="text" class="input" placeholder="Your Last Name" id="lastName">
+                        <input type="email" class="input" placeholder="Your Email" id="email">
+                        <input type="tel" class="input" placeholder="Your Number Phone" id="phone">
+                        <textarea class="textarea" placeholder="Where are your address?" id="address"></textarea>
+                        <textarea class="textarea" placeholder="Note:" id="note"></textarea>
                         <button class="submit button js-submit">Prenota ora</button>
                     </div>
                 </div>
@@ -775,7 +784,7 @@ Cena e pernottamento in hotel ad Ahungalle.
         </div>
         <div class="close"></div>
     </div>
-
+    <script src="email.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/lightgallery.js"></script>
