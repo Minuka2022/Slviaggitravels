@@ -1,4 +1,40 @@
 
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Assuming you have a reference to the button
+  const submitButton = document.querySelector('.js-popup-open');
+
+  // Add a click event listener to the button
+  submitButton.addEventListener('click', function () {
+      // Get text content from the original divs
+      const originalDay = document.querySelector('.day').textContent.trim();
+  const originalMonth = document.querySelector('.month').textContent.trim();
+  const originalYear = document.querySelector('.year').textContent.trim();
+
+  const originalDay1 = document.querySelector('[name="day"]').textContent.trim();
+  const originalMonth1 = document.querySelector('[name="month"]').textContent.trim();
+  const originalYear1 = document.querySelector('[name="year"]').textContent.trim();
+
+  const adultsValue = document.querySelector('input[name="adults"]').value;
+  const childrenValue = document.querySelector('input[name="children"]').value;
+
+      // Auto-fill the text into other divs
+      document.querySelector('[name="auto-fill-day"]').textContent = originalDay;
+      document.querySelector('[name="auto-fill-month"]').textContent = originalMonth;
+      document.querySelector('[name="auto-fill-year"]').textContent = originalYear;
+
+      document.querySelector('[name="auto-fill-day1"]').textContent = originalDay1;
+      document.querySelector('[name="auto-fill-month1"]').textContent = originalMonth1;
+      document.querySelector('[name="auto-fill-year1"]').textContent = originalYear1;
+
+      document.querySelector('span[name="auto-fill-adults"]').textContent = adultsValue;
+  document.querySelector('span[name="auto-fill-children"]').textContent = childrenValue;
+      // change
+  });
+});
+
+
 src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
 
 
