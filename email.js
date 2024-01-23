@@ -65,6 +65,10 @@ document.addEventListener('DOMContentLoaded', function() {
       omonth: document.getElementById('auto-fill-month1').innerHTML,
       oyear: document.getElementById('auto-fill-year1').innerHTML,
 
+      adults: document.getElementsByName('auto-fill-adults')[0].innerHTML,
+children: document.getElementsByName('auto-fill-children')[0].innerHTML,
+
+
     };
 
     // Use EmailJS to send the email to you
@@ -72,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Prepare the email template parameters for your email
     var templateParamsForYou = {
-      to_name: "Your Name",  // Replace with your name or the desired recipient name
+      to_name: "ayodya", // Replace with your name or the desired recipient name
       from_name: formData.firstName,
       email: formData.email,
       phone: formData.phone,
@@ -85,6 +89,8 @@ document.addEventListener('DOMContentLoaded', function() {
       oday: formData.oday,
       omonth: formData.omonth,
       oyear:formData.oyear,
+      adults1:formData.adults,
+      children1:formData.children,
 
     };
 
@@ -112,6 +118,8 @@ document.addEventListener('DOMContentLoaded', function() {
       oday: formData.oday,
       omonth: formData.omonth,
       oyear:formData.oyear,
+      adults1:formData.adults,
+      children1:formData.children,
     };
 
     // Use the service ID and template ID for the customer from your EmailJS account
@@ -121,6 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Display a confirmation message to the user (you may want to replace this with actual user feedback)
         alert('Booking successful!');
+        
         
         // Optionally, you can redirect the user to a thank-you page or perform other actions as needed
         // window.location.href = 'thank-you.html';
@@ -134,17 +143,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
   });
   // Clear form fields after sending emails
-  document.getElementById('firstName').value = '';
-  document.getElementById('lastName').value = '';
-  document.getElementById('email').value = '';
-  document.getElementById('phone').value = '';
-  document.getElementById('address').value = '';
-  document.getElementById('note').value = '';
-  document.getElementById('package').value = '';
-  document.getElementById('oday').value = '';
-  document.getElementById('omonth').value = '';
-  document.getElementById('oyear').value = '';
-  document.getElementById('iday').value = '';
-  document.getElementById('imonth').value = '';
-  document.getElementById('iyear').value = '';
+
 });
