@@ -11525,6 +11525,7 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   border-radius: 14px;
   display: block;
   max-width: 100%;
+  max-height:60%;
 }
 .about-us-page .image-block span {
   font-size: 16px;
