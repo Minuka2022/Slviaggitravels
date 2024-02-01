@@ -3731,10 +3731,22 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
 .social-links .link.facebook {
   background: #33589e;
 }
+
+.social-links .link.whatsapp {
+  background: #00e78f;
+}
 .social-links .link.facebook span:before {
   width: 13px;
   height: 25px;
   background-image: url(../img/facebook-logo.svg);
+  margin-top: -13px;
+  margin-left: -7px;
+}
+
+.social-links .link.whatsapp span:before {
+  width: 13px;
+  height: 25px;
+  background-image: url(../img/WhatsApp.svg.webp);
   margin-top: -13px;
   margin-left: -7px;
 }
@@ -3804,6 +3816,18 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   background-image: url(../img/youtube-logo.svg);
   margin-top: -8px;
   margin-left: -12px;
+}
+
+.social-links .link.whatsapp span:before {
+  width: 23px;
+  height: 16px;
+  background-image: url(../img/whatsapp.svg);
+  margin-top: -8px;
+  margin-left: -12px;
+}
+
+.social-links .link.whatsapp {
+  background: #00f535;
 }
 .modal_search {
   background: rgba(0, 48, 208, 0.89);
@@ -11746,6 +11770,14 @@ body.os-windows .popup::-webkit-scrollbar-thumb {
   width: 28px;
   height: 22px;
   background-image: url(../img/twitter-logo.svg);
+  margin-top: -11px;
+  margin-left: -14px;
+}
+
+.about-us-page .team_item .image .socials .links a.whatsapp:before {
+  width: 28px;
+  height: 22px;
+  background-image: url(../img/WhatsApp.svg.webp);
   margin-top: -11px;
   margin-left: -14px;
 }
