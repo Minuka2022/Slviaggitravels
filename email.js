@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("Customer email sent successfully:", response);
 
         // Display a confirmation message to the user (you may want to replace this with actual user feedback)
-        alert("Booking successful!");
+        window.location.href = "thank-you.html";
 
         // Optionally, you can redirect the user to a thank-you page or perform other actions as needed
         // window.location.href = 'thank-you.html';
