@@ -60,8 +60,8 @@
 
       // Prepare email template parameters
       var templateParamsForYou = {
-       
-        from_name: formData.firstName,
+        to_name: "Bhagya",
+        from_name: formData.firstName + " " + formData.lastName,
         email: formData.email,
         phone: formData.phone,
         address: formData.address,
@@ -79,7 +79,7 @@
 
       var templateParamsForCustomer = {
         to_name: "Bhagya",
-        from_name: formData.firstName,
+        from_name: formData.firstName + " " + formData.lastName,
         email: formData.email,
         phone: formData.phone,
         address: formData.address,
